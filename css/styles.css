@@ -20,7 +20,7 @@ a {
     min-height: 100vh;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 90px auto;
+    grid-template-columns: minmax(90px, 90px) auto;
     grid-template-rows: 60px auto;
     grid-template-areas: "header header"
                             "menu main";
@@ -28,7 +28,7 @@ a {
 }
 
 .container.active {
-    grid-template-columns: 300px auto;
+    grid-template-columns: minmax(300px, 18%) auto;
 }
 
 .header {
@@ -184,4 +184,25 @@ a {
 
 .main {
     grid-area: main;
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+.main .title {
+    margin-bottom: 20px;
+}
+
+.main .videos-collection {
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main .videos-collection .video {
+    width: 100%;
+    display: block;
+}
+
+.main .videos-collection .video img {
+    width: 100%;
 }
