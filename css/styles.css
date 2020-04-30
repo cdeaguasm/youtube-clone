@@ -206,3 +206,56 @@ a {
 .main .videos-collection .video img {
     width: 100%;
 }
+
+@media screen and (max-width: 1200px) {
+    .main .videos-collection {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header .container-logo .logo span {
+        display: none;
+    }
+
+    .header .search-bar input {
+        min-width: 80%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main .videos-collection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-rows: auto;
+    }
+
+    .header {
+        padding: 20px;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        grid-template-areas: "logo account"
+                            "search search";
+    }
+
+    .header .search-bar input {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .header .container-logo .logo span {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 473px) {
+    .main .videos-collection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .header .container-logo .logo span {
+        display: none;
+    }
+}
